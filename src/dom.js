@@ -5,19 +5,26 @@ const DomHandler = (() => {
 
     const mainDiv = document.getElementById("mainDiv");
 
-    function renderWeather(){
+    function renderWeather(weatherData){
+        const weatherDiv = document.createElement("div");
+        const cityName = document.createElement("div");
+        const cityData = document.createElement("div");
 
-        const searchbar = document.createElement("input");
-        const submitBtn = document.createElement("button");
+        weatherDiv.classList.add("weatherDiv");
+        cityName.classList.add("cityName");
+        cityData.classList.add("cityData");
 
-        searchbar.classList.add("searchBar");
+        cityName.textContent = weatherData.city;
 
-        submitBtn.classList.add("submitBtn");
-        submitBtn.innerText = "Search";
+        
 
-        //console.log(fetchData());
 
-        mainDiv.append(searchbar, submitBtn);
+
+
+
+        weatherDiv.append(cityName,cityData);
+
+        mainDiv.append(weatherDiv);
 
     }
 

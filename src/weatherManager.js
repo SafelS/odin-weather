@@ -2,12 +2,27 @@
 
 import DomHandler from "./dom";
 import { fetchData } from "./fetchService";
+import { createWeatherData } from "./weatherData";
 
-DomHandler.renderWeather();
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click", async (e) => {
     if(e.target.classList.contains("submitBtn")){
-        const inputData = document.querySelector(".searchBar").value.trim();
-        console.log(fetchData(inputData));
+        const city = document.querySelector(".searchBar").value.trim();
+
+        try{
+
+            const apiData = await fetchData(city);
+            console.log(apiData);
+
+            const weatherData = createWeatherData(apiData);
+            console.log(weatherData);
+
+            DomHandler.renderWeather(weatherData);
+
+        }catch(err){
+
+            console.error(err)
+
+        }
     }
 })
