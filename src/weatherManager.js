@@ -3,6 +3,7 @@
 import DomHandler from "./dom";
 import { fetchData } from "./fetchService";
 import { createWeatherData } from "./weatherData";
+import "./style.css";
 
 
 document.addEventListener("click", async (e) => {

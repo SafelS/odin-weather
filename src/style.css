@@ -1,0 +1,57 @@
+#mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap: 100px;
+}
+
+.weatherDiv{
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    border-radius: 10px ;
+    
+}
+
+.cityName{
+    display: flex;
+    justify-content: center;
+    border-bottom: solid black 1px;
+    padding: 5px;
+    
+    font-size: 25px;
+}
+
+.cityData{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.cityData .temp{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+    width: 100%;
+
+}
+
+.cityData .cond, .wind, .humidity{
+
+    font-size: 20px;
+    
+}
+
+.cityData .wind{
+
+}
+
+.cityData .humidity{
+
+}
